@@ -17,6 +17,7 @@ const levels = [
     rows: [[2, 3], [3], [3, 2], [5, 1, 2], [7, 1], [1, 4], [5], [6], [3], [2]],
     columns: [[1, 4], [1, 3], [3], [2], [5], [4], [5], [2, 4], [5, 4], [4, 3]],
     height: 400,
+    width: 450,
   },
   {
     type: 'easy',
@@ -47,6 +48,7 @@ const levels = [
     ],
     columns: [[1, 3], [6], [4], [3, 1], [1], [3], [1, 5], [1, 5], [3, 5], [8]],
     height: 400,
+    width: 450,
   },
   {
     type: 'easy',
@@ -88,6 +90,7 @@ const levels = [
       [4],
     ],
     height: 450,
+    width: 450,
   },
   {
     type: 'medium',
@@ -144,6 +147,7 @@ const levels = [
       [1, 1, 1],
     ],
     height: 600,
+    width: 600,
   },
   {
     type: 'medium',
@@ -200,6 +204,7 @@ const levels = [
       [4, 8],
     ],
     height: 600,
+    width: 650,
   },
   {
     type: 'medium',
@@ -256,6 +261,7 @@ const levels = [
       [4],
     ],
     height: 650,
+    width: 650,
   },
   {
     type: 'hard',
@@ -327,6 +333,7 @@ const levels = [
       [3, 2],
     ],
     height: 800,
+    width: 800,
   },
   {
     type: 'hard',
@@ -400,6 +407,7 @@ const levels = [
       [3],
     ],
     height: 850,
+    width: 850,
   },
   {
     type: 'hard',
@@ -472,6 +480,7 @@ const levels = [
       [11],
     ],
     height: 850,
+    width: 850,
   },
 ];
 
