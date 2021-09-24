@@ -454,6 +454,12 @@ var currentPicture = [
 
 var coordinates = [];
 
+const timer = document.getElementById('stopwatch');
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
+
 function draw() {
   let myFont = new FontFace(
     'SourceCodePro',
@@ -465,6 +471,7 @@ function draw() {
     canvas.height = level.height;
     canvas.width = level.width;
     if (canvas.getContext) {
+      startTimer();
       var ctx = canvas.getContext('2d');
       ctx.strokeStyle = 'rgb(31, 37, 77)';
       ctx.font = 'bold 22px SourceCodePro';
@@ -528,6 +535,52 @@ function draw() {
   });
 }
 
+function startTimer() {
+  if (stoptime == true) {
+    stoptime = false;
+    timerCycle();
+  }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function timerCycle() {
+  if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout('timerCycle()', 1000);
+  }
+}
+
 function getMax(array) {
   return (
     Math.max.apply(
@@ -547,7 +600,8 @@ function clickSquare() {
     if (coordinate != null) {
       drawSquare(ctx, coordinate);
       if (equalsPictures()) {
-        alert('YOU WIN!!!');
+        stopTimer();
+        timer.innerHTML = 'Вы победили!\nВремя:' + hr + ':' + min + ':' + sec;
       }
     }
   }
