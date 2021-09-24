@@ -1,18 +1,12 @@
-var rightPicture = [
-  [1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
-  [0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
-  [1, 1, 1, 0, 0, 0, 0, 0, 1, 1],
-  [1, 1, 1, 1, 1, 0, 1, 0, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 0, 1, 0],
-  [1, 0, 0, 0, 1, 1, 1, 1, 0, 0],
-  [0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
-  [0, 0, 0, 0, 1, 1, 1, 1, 1, 1],
-  [0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
-  [0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
-];
+const level = getLevel(
+  localStorage.getItem('type'),
+  localStorage.getItem('number')
+);
 
-var rows = [[2, 3], [3], [3, 2], [5, 1, 2], [7, 1], [1, 4], [5], [6], [3], [2]];
-var columns = [[1, 4], [1, 3], [3], [2], [5], [4], [5], [2, 4], [5, 4], [4, 3]];
+var rightPicture = level.nonogram;
+
+var rows = level.rows;
+var columns = level.columns;
 
 var currentPicture = [
   [null, null, null, null, null, null, null, null, null, null],
@@ -31,6 +25,7 @@ var coordinates = [];
 
 function draw() {
   var canvas = document.getElementById('nonogram');
+  canvas.height = level.height;
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
@@ -98,7 +93,7 @@ function getMax(array) {
 }
 
 function clickSquare() {
-  var canvas = document.getElementById('nanogram');
+  var canvas = document.getElementById('nonogram');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
     var coordinate = findCoordinate(event.layerX, event.layerY);
