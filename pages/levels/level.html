@@ -12,17 +12,20 @@
 </head>
     </head>
     <main>
-        <body >
+        <body onload="draw()">
             <div class="main_container">
                 <button class="button goBack" onclick="history.go(-1); return false;">Вернуться</button>
-                <h1 class="title">Лёгкие уровни</h1>
-                <button class="button roundButton" onclick="play('easy', 1)">1</button>
-                <button class="button roundButton" onclick="play('easy', 2)">2</button>
-                <button class="button roundButton" onclick="play('easy', 3)">3</button>
+                <h1 class="title" id="stopwatch"></h1>
+          <canvas
+           id="nonogram"
+   
+      onclick="clickSquare()">           
+             
+          </canvas>
             </div>
-
-            <script type="application/javascript" src="../../scripts/storageScript.js"></script>
-
+            <script type="application/javascript" src="../../scripts/levelsScript.js"></script>
+            <script type="application/javascript" src="../../scripts/gameScript.js"></script>
         </body>
     </main>
+
 </html>

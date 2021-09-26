@@ -1,66 +1,66 @@
-body{
-    background-color: rgb(135, 206, 250);
-    background-image: url("../assets/background.webp");
-    background-size: cover;
+body {
+  background-color: rgb(135, 206, 250);
+  background-image: url('../assets/background.webp');
+  background-size: cover;
 }
 
 .main_container {
-    background-color:rgb(255, 254, 251);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px;
-    padding: 50px;
-    border-radius: 40px;
-    border: 10px solid  rgb(75, 135, 184);
+  background-color: rgb(255, 254, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 40px;
+  border: 10px solid rgb(75, 135, 184);
 }
 
 .title {
-    margin: 0;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 36px;
-    color:cornflowerblue; 
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 36px;
+  color: cornflowerblue;
 }
 h4 {
-    margin: 25px;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 18px;
-    color: #1f254d; 
-    width: 50%;
-    font-weight: 400;
+  margin: 25px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 18px;
+  color: #1f254d;
+  width: 50%;
+  font-weight: 400;
 }
 
 .button {
-    display: flex;
-    font-weight: 600;
-    background-color: lightblue;
-    padding: 20px 50px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color:steelblue;
-    border-radius: 20px;
-    border: 5px solid linen;
-    box-shadow: 8px 8px lightgrey;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 24px;
-    margin: 5px;
+  display: flex;
+  font-weight: 600;
+  background-color: lightblue;
+  padding: 20px 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: steelblue;
+  border-radius: 20px;
+  border: 5px solid linen;
+  box-shadow: 8px 8px lightgrey;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 24px;
+  margin: 5px;
 }
 .roundButton {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    padding: 0;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: 0;
 }
 .goBack {
-    position: absolute;
-    left: 80px;
-    top: 70px;
-    font-size: 18px;
-    padding: 5px 10px;
+  position: absolute;
+  left: 80px;
+  top: 70px;
+  font-size: 18px;
+  padding: 5px 10px;
 }
 button:hover {
-    box-shadow: -4px -4px rgb(30, 73, 109);
-    border: 2px solid rgb(30, 73, 109);
-    background-color: rgb(141, 187, 202);
+  box-shadow: -4px -4px rgb(30, 73, 109);
+  border: 2px solid rgb(30, 73, 109);
+  background-color: rgb(141, 187, 202);
 }
